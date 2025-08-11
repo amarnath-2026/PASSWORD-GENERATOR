@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>🔐 Password Generator</h1>
+
+    <div class="output">
+      <input id="passwordOutput" readonly placeholder="Your secure password will appear here" />
+      <button id="copyBtn" title="Copy password">Copy</button>
+    </div>
+
+    <div class="controls">
+      <label class="row">
+        <span>Length: <strong id="lengthLabel">16</strong></span>
+        <input id="length" type="range" min="6" max="64" value="16" />
+      </label>
+
+      <label class="checkbox"><input id="lowercase" type="checkbox" checked /> Include lowercase (a-z)</label>
+      <label class="checkbox"><input id="uppercase" type="checkbox" checked /> Include UPPERCASE (A-Z)</label>
+      <label class="checkbox"><input id="numbers" type="checkbox" checked /> Include numbers (0-9)</label>
+      <label class="checkbox"><input id="symbols" type="checkbox" /> Include symbols (!@#...)</label>
+
+      <div class="buttons">
+        <button id="generateBtn">Generate</button>
+        <button id="clearBtn" class="muted">Clear</button>
+      </div>
+
+      <div class="strength">
+        <span>Password strength:</span>
+        <div id="strengthBar" class="bar"><div class="fill"></div></div>
+        <span id="strengthText" class="strengthText">—</span>
+      </div>
+
+      <p class="hint">Tip: Use a long password with mixed character types for best security.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
